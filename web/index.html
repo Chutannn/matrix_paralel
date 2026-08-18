@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benchmark Pemrosesan Matriks OpenMP</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Parallel Matrix Computing Benchmark</h1>
+            <p>Perbandingan Performa Algoritma Serial vs Paralel OpenMP pada Bahasa C</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="stats-grid">
+            <div class="card">
+                <h3>Total Pengujian</h3>
+                <div class="metric" id="total-tests">0</div>
+            </div>
+            <div class="card">
+                <h3>Speedup Maksimum</h3>
+                <div class="metricHighlight" id="max-speedup">0x</div>
+            </div>
+            <div class="card">
+                <h3>Peak GFLOPS</h3>
+                <div class="metric" id="peak-gflops">0</div>
+            </div>
+            <div class="card">
+                <h3>Status Verifikasi</h3>
+                <div class="metricSuccess" id="verification-status">PASSED</div>
+            </div>
+        </section>
+
+        <section class="chart-section">
+            <div class="chart-card">
+                <h2>Waktu Eksekusi (Detik) vs Ukuran Matriks</h2>
+                <div class="chart-container">
+                    <canvas id="timeChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-card">
+                <h2>Speedup vs Jumlah Thread</h2>
+                <div class="chart-container">
+                    <canvas id="speedupChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="chart-section">
+            <div class="chart-card">
+                <h2>Efisiensi Paralel (%)</h2>
+                <div class="chart-container">
+                    <canvas id="efficiencyChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-card">
+                <h2>Performa Komputasi (GFLOPS)</h2>
+                <div class="chart-container">
+                    <canvas id="gflopsChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="table-section">
+            <h2>Data Hasil Benchmark Detail</h2>
+            <div class="table-container">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th>Ukuran Matriks</th>
+                            <th>Mode</th>
+                            <th>Thread</th>
+                            <th>Waktu (s)</th>
+                            <th>Speedup</th>
+                            <th>Efisiensi (%)</th>
+                            <th>GFLOPS</th>
+                            <th>Verifikasi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Proyek Komputasi Paralel & Terdistribusi - Pemrosesan Matriks C OpenMP</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
